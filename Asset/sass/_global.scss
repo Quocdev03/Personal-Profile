@@ -1,0 +1,194 @@
+// html {
+//     scroll-behavior: smooth;
+// }
+
+body {
+    min-height: 100vh;
+    background-image: $background-gradient;
+    background-attachment: fixed;
+    color: $blue-dark;
+    line-height: 1.5;
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 35px 15px;
+    overflow-x: hidden;
+
+    &::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $green-yellow;
+        z-index: -1;
+        opacity: 0.12;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+        border-radius: 5px;
+    }
+
+    &.hide {
+        &-scrolling {
+            overflow-y: hidden;
+        }
+    }
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+section {
+    background-color: $white-alpha-25;
+    border: 1px solid $white-alpha-40;
+    min-height: calc(100vh - 70px);
+    border-radius: 20px;
+    backdrop-filter: $backdrop-filter-blur;
+    display: none;
+
+    &.active {
+        display: block;
+        animation: fadeIn .5s ease-in-out forwards;
+    }
+
+    &.fade-out {
+        animation: fadeOut .5s ease-in-out forwards;
+    }
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+button {
+    font-family: inherit;
+    user-select: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+
+    &.fade {
+        &-out {
+            opacity: 0;
+        }
+    }
+}
+
+.container {
+    padding: 0 40px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    line-height: 1.5;
+    background-color: $white-alpha-25;
+    border: 1px $white-alpha-40;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 30px;
+    color: $main-color;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background-color: $main-color;
+        z-index: -1;
+        transition: width 0.3s ease;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sec {
+    &-padding {
+        padding: 80px 0;
+    }
+}
+
+.section {
+    &-title {
+        padding: 0 15px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.align {
+    &-item {
+        &-center {
+            align-items: center;
+        }
+    }
+}
+
+.flex {
+    &-end {
+        justify-content: flex-end;
+    }
+}
+
+.hidden-item {
+    display: none !important;
+}

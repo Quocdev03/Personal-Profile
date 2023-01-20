@@ -1,0 +1,55 @@
+.background {
+    &-circles {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        max-width: 1200px;
+        width: calc(100% - 30px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        &>div {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        &-1 {
+            width: 60px;
+            height: 60px;
+            background-color: $blue;
+            left: 5%;
+            top: 10%;
+            opacity: 0.3;
+            animation: zoomInOut 5s ease-in-out infinite;
+        }
+
+        &-2 {
+            height: 80px;
+            width: 80px;
+            background-color: $main-color;
+            left: 30%;
+            top: 50%;
+            opacity: .4;
+            animation: bounceTop 5s ease-in-out infinite;
+        }
+
+        &-3 {
+            height: 120px;
+            width: 120px;
+            background-color: $white;
+            right: -60px;
+            top: 40%;
+            opacity: .6;
+            animation: bounceTop 5s ease-in-out infinite;
+        }
+
+        &-4 {
+            height: 50px;
+            width: 50px;
+            background-color: $orange;
+            left: -30px;
+            top: 80%;
+            opacity: .4;
+        }
+    }
+}

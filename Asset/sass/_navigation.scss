@@ -1,0 +1,117 @@
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px 15px;
+    overflow-y: auto;
+    visibility: hidden;
+
+    &-inner {
+        min-height: calc(100vh - 70px);
+        background-color: $white-alpha-25;
+        border: 1px solid $white-alpha-40;
+        max-width: 1200px;
+        margin: auto;
+        backdrop-filter: $backdrop-filter-blur;
+        padding: 50px 0;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+
+    &-item {
+        text-align: center;
+        margin-bottom: 20px;
+        align-items: center;
+        display: flex;
+    }
+
+    &-link {
+        font-size: 40px;
+        text-transform: capitalize;
+        color: $blue-dark;
+        font-weight: 500;
+        padding: 8px 10px;
+        transform: color .3s ease;
+        position: relative;
+
+        &:hover {
+            color: $main-color;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 50%;
+            width: 0;
+            background-color: $white-alpha-40;
+            z-index: -1;
+            transition: width .5s ease;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &-toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $white-alpha-25;
+        border: 1px solid $white-alpha-40;
+        margin: 0 15px;
+        z-index: 1;
+        transition: opacity .5s ease-in-out;
+
+        span {
+            width: 24px;
+            height: 2.4px;
+            background-color: $main-color;
+            position: relative;
+            transition: background-color .3s ease;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $main-color;
+                transition: all .3s ease;
+                border-radius: 2px;
+            }
+
+            &::before {
+                left: 0;
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                right: 0;
+                transform: translateY(8px);
+            }
+        }
+
+        &.hide {
+            opacity: 0;
+            transition: none;
+        }
+    }
+}

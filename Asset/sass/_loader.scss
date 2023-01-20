@@ -1,0 +1,51 @@
+.page {
+    &-loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: $white-alpha-25;
+        backdrop-filter: $backdrop-filter-blur;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity .6s ease;
+
+        &.fade {
+            &-out {
+                opacity: 0;
+            }
+        }
+
+        &-item {
+            border: 2px solid transparent;
+            position: absolute;
+            border-radius: 50%;
+            opacity: .6;
+            border-top-color: transparent !important;
+            border-bottom-color: transparent !important;
+            animation: spin 1s linear infinite;
+
+            &:nth-child(1) {
+                height: 60px;
+                width: 60px;
+                border-color: $main-color;
+            }
+
+            &:nth-child(2) {
+                height: 45px;
+                width: 45px;
+                border-color: $blue;
+                animation-duration: 1.2s;
+            }
+
+            &:nth-child(3) {
+                height: 30px;
+                width: 30px;
+                border-color: rgba(35, 251, 224, 1);
+            }
+        }
+    }
+}

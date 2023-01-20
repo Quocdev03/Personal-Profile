@@ -1,0 +1,67 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0 0;
+
+    &.active {
+        .nav {
+            visibility: visible;
+        }
+
+        .nav {
+            &-inner {
+                opacity: 1;
+            }
+        }
+
+        .nav {
+            &-toggler {
+                span {
+                    background-color: transparent;
+                }
+
+                span {
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(.active) {
+        .nav {
+            &-toggler {
+                &:hover {
+                    span {
+
+                        &::before,
+                        &::after {
+                            width: 50% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        position: fixed;
+        top: 35px;
+        padding: 20px 15px;
+    }
+
+    &.active {
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+    }
+}

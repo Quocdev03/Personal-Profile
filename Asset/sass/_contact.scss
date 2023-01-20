@@ -1,0 +1,95 @@
+.contact {
+    &-section {
+        height: $sec-height;
+        overflow-y: scroll;
+
+        & {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &-form,
+    &-info {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    &-input {
+        &-group {
+            width: 100%;
+            margin-bottom: 30px;
+
+            textarea {
+                height: 120px;
+                resize: none;
+                padding-top: 15px;
+            }
+        }
+
+        &-control {
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            font-family: inherit;
+            font-weight: 400;
+            font-size: 16px;
+            padding: 0 20px;
+            background-color: $white-alpha-25;
+            color: $blue-dark;
+            border: 2px solid transparent;
+            outline: none;
+            transition: border-color .3s ease;
+
+            &:focus {
+                border-color: $white-alpha-40;
+            }
+
+            &::placeholder {
+                color: $blue-dark;
+                opacity: .8;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &-info {
+        &-item {
+            margin: 0 0 30px;
+            padding: 0 0 0 20px;
+        }
+
+        &-title {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin: 0 0 5px;
+        }
+
+        &-social {
+            &-link {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                background-color: $white-alpha-25;
+                border: 1px solid $white-alpha-40;
+                color: $main-color;
+                border-radius: 50%;
+                margin: 6px 4px 0 0;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
