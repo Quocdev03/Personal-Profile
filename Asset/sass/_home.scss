@@ -1,65 +1,65 @@
 .home {
-    &-section {
-        padding: 120px 0;
-        height: $sec-height;
+   &-section {
+      padding: 120px 0;
+      height: $sec-height;
 
-        &.active {
-            display: flex;
-        }
-    }
+      &.active {
+         display: flex;
+      }
+   }
 
-    &-image {
+   &-image {
 
-        &-box {
-            max-width: 360px;
-            background-color: $white-alpha-25;
+      &-box {
+         max-width: 360px;
+         background-color: $white-alpha-25;
+         border-radius: 50%;
+         border: 8px solid $white-alpha-25;
+         margin: auto;
+
+         img {
+            width: 100%;
             border-radius: 50%;
-            border: 8px solid $white-alpha-25;
-            margin: auto;
+         }
+      }
+   }
 
-            img {
-                width: 100%;
-                border-radius: 50%;
-            }
-        }
-    }
+   &-image,
+   &-content {
+      width: 50%;
+      padding: 15px;
+   }
 
-    &-image,
-    &-content {
-        width: 50%;
-        padding: 15px;
-    }
+   &-introduce {
+      font-size: 18px;
+      letter-spacing: 1.5px;
+   }
 
-    &-introduce {
-        font-size: 18px;
-        letter-spacing: 1.5px;
-    }
+   &-name {
+      font-size: 50px;
+      text-transform: capitalize;
+      font-weight: 600;
+   }
 
-    &-name {
-        font-size: 50px;
-        text-transform: capitalize;
-        font-weight: 600;
-    }
+   &-job {
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: capitalize;
+      margin: 0 0 30px;
+      letter-spacing: 1.5px;
+   }
 
-    &-job {
-        font-size: 20px;
-        font-weight: 300;
-        text-transform: capitalize;
-        margin: 0 0 30px;
-        letter-spacing: 1.5px;
-    }
+   &-button {
+      margin-bottom: 15px;
 
-    &-button {
-        margin-bottom: 15px;
+      &-link {
+         margin: 0 15px 15px 0;
+      }
+   }
 
-        &-link {
-            margin: 0 15px 15px 0;
-        }
-    }
-
-    &-social {
-        a {
-            margin-left: 10px;
-        }
-    }
+   &-social {
+      a {
+         margin-left: 10px;
+      }
+   }
 }

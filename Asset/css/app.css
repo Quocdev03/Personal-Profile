@@ -922,6 +922,9 @@ button {
     font-size: 18px;
     transition: font-size 0.2s ease-in;
   }
+  .portfolio-item-thumbnail img {
+    height: 100%;
+  }
   .portfolio-popup-title {
     font-size: 22px;
     transition: font-size 0.2s ease-in;
