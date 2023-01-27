@@ -1,184 +1,185 @@
 .about {
-    &-section {
-        height: $sec-height;
-        overflow-y: scroll;
+   &-section {
+      height: $sec-height;
+      overflow-y: scroll;
+      padding-bottom: 50px;
 
-        & {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+      & {
+         -ms-overflow-style: none;
+         scrollbar-width: none;
+      }
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
+      &::-webkit-scrollbar {
+         display: none;
+      }
+   }
 
-    &-image {
-        width: 40%;
-        padding: 0 15px;
+   &-image {
+      width: 40%;
+      padding: 0 15px;
 
-        &-box {
-            background-color: $white-alpha-25;
-            max-width: 380px;
-            border: 1px solid $white-alpha-40;
-            margin: auto;
-            border-radius: 10px;
+      &-box {
+         background-color: $white-alpha-25;
+         max-width: 380px;
+         border: 1px solid $white-alpha-40;
+         margin: auto;
+         border-radius: 10px;
 
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
+         img {
+            width: 100%;
+            object-fit: cover;
+         }
+      }
+   }
 
-    &-content {
-        width: 60%;
-        padding: 0 15px;
-    }
+   &-content {
+      width: 60%;
+      padding: 0 15px;
+   }
 
-    &-skill {
-        display: flex;
-        flex-wrap: wrap;
+   &-skill {
+      display: flex;
+      flex-wrap: wrap;
 
-        &-title {
-            text-transform: capitalize;
-            font-size: 20px;
-            margin: 20px 0;
-        }
+      &-title {
+         text-transform: capitalize;
+         font-size: 20px;
+         margin: 20px 0;
+      }
 
-        &-item {
-            background-color: $white-alpha-25;
-            border: 1px solid $white-alpha-40;
-            padding: 5px 15px;
-            text-transform: capitalize;
-            margin: 0 10px 10px 0;
-            border-radius: 20px;
-        }
-    }
+      &-item {
+         background-color: $white-alpha-25;
+         border: 1px solid $white-alpha-40;
+         padding: 5px 15px;
+         text-transform: capitalize;
+         margin: 0 10px 10px 0;
+         border-radius: 20px;
+      }
+   }
 
-    &-desc {
-        line-height: 30px;
-        font-size: 17px;
-    }
+   &-desc {
+      line-height: 30px;
+      font-size: 17px;
+   }
 
-    &-tab {
-        margin-top: 20px;
+   &-tab {
+      margin-top: 20px;
 
-        &-content {
-            padding: 40px 0;
-            display: none;
+      &-content {
+         padding: 40px 0;
+         display: none;
 
-            &.active {
-                display: block !important;
-            }
-        }
+         &.active {
+            display: block !important;
+         }
+      }
 
-        &-item {
-            padding: 2px 0;
-            background-color: transparent;
-            border: none;
-            display: inline-block;
-            color: $blue-dark;
-            font-size: 20px;
-            cursor: pointer;
-            font-weight: 500;
-            margin: 0 30px 0 0;
-            opacity: .5;
-            position: relative;
+      &-item {
+         padding: 2px 0;
+         background-color: transparent;
+         border: none;
+         display: inline-block;
+         color: $blue-dark;
+         font-size: 20px;
+         cursor: pointer;
+         font-weight: 500;
+         margin: 0 30px 0 0;
+         opacity: .5;
+         position: relative;
 
-            &:last-child {
-                margin: 0;
-            }
+         &:last-child {
+            margin: 0;
+         }
 
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0px;
-                width: 0;
-                height: 2px;
-                background-color: $blue-dark;
-                transition: width .3s ease;
-            }
-
-            &:hover {
-                &::before {
-                    width: 100%;
-                }
-            }
-
-            &.active {
-                color: $main-color;
-                opacity: 1;
-                cursor: auto;
-            }
-
-            &.active {
-                &::before {
-                    width: 100%;
-                    background-color: $main-color;
-                }
-            }
-        }
-    }
-
-    &-timeline {
-        position: relative;
-
-        &::before {
+         &::before {
             content: '';
             position: absolute;
-            height: 100%;
-            width: 1px;
-            top: 0;
-            left: 5px;
-            background-color: $main-color;
-        }
+            left: 0;
+            bottom: 0px;
+            width: 0;
+            height: 2px;
+            background-color: $blue-dark;
+            transition: width .3s ease;
+         }
 
-        &-item {
-            margin-bottom: 30px;
-            position: relative;
-            padding: 10px 0 0 40px;
-
+         &:hover {
             &::before {
-                content: '';
-                position: absolute;
-                height: 11px;
-                width: 11px;
-                background-color: $main-color;
-                left: 0;
-                top: 16px;
-                border-radius: 50%;
+               width: 100%;
             }
+         }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &-date {
-            display: block;
+         &.active {
             color: $main-color;
-            font-weight: 600;
-            margin: 0 0 10px;
-        }
+            opacity: 1;
+            cursor: auto;
+         }
 
-        &-title {
-            font-size: 18px;
-            text-transform: capitalize;
-            margin: 0 0 10px;
-            font-weight: 500;
-        }
+         &.active {
+            &::before {
+               width: 100%;
+               background-color: $main-color;
+            }
+         }
+      }
+   }
 
-        &-desc {
-            font-weight: 300;
-        }
-    }
+   &-timeline {
+      position: relative;
 
-    &-button {
-        &-link {
-            margin: 0 15px 15px 0;
-        }
-    }
+      &::before {
+         content: '';
+         position: absolute;
+         height: 100%;
+         width: 1px;
+         top: 0;
+         left: 5px;
+         background-color: $main-color;
+      }
+
+      &-item {
+         margin-bottom: 30px;
+         position: relative;
+         padding: 10px 0 0 40px;
+
+         &::before {
+            content: '';
+            position: absolute;
+            height: 11px;
+            width: 11px;
+            background-color: $main-color;
+            left: 0;
+            top: 16px;
+            border-radius: 50%;
+         }
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+
+      &-date {
+         display: block;
+         color: $main-color;
+         font-weight: 600;
+         margin: 0 0 10px;
+      }
+
+      &-title {
+         font-size: 18px;
+         text-transform: capitalize;
+         margin: 0 0 10px;
+         font-weight: 500;
+      }
+
+      &-desc {
+         font-weight: 300;
+      }
+   }
+
+   &-button {
+      &-link {
+         margin: 0 15px 15px 0;
+      }
+   }
 
 }

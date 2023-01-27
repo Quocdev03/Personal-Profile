@@ -54,15 +54,12 @@ body::before {
   z-index: -1;
   opacity: 0.12;
 }
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 body::-webkit-scrollbar {
-  width: 6px;
-}
-body::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(212, 212, 212);
-  border-radius: 5px;
+  display: none;
 }
 body.hide-scrolling {
   overflow-y: hidden;
@@ -333,8 +330,16 @@ button {
 }
 
 .home-section {
-  padding: 120px 0;
-  height: 650px;
+  padding: 80px 0;
+  height: 560px;
+  overflow-y: scroll;
+}
+.home-section {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.home-section::-webkit-scrollbar {
+  display: none;
 }
 .home-section.active {
   display: flex;
@@ -381,8 +386,9 @@ button {
 }
 
 .about-section {
-  height: 650px;
+  height: 560px;
   overflow-y: scroll;
+  padding-bottom: 50px;
 }
 .about-section {
   -ms-overflow-style: none;
@@ -529,8 +535,9 @@ button {
 }
 
 .portfolio-section {
-  height: 650px;
+  height: 560px;
   overflow-y: scroll;
+  padding-bottom: 30px;
 }
 .portfolio-section {
   -ms-overflow-style: none;
@@ -664,8 +671,9 @@ button {
 }
 
 .contact-section {
-  height: 650px;
+  height: 560px;
   overflow-y: scroll;
+  padding-bottom: 50px;
 }
 .contact-section {
   -ms-overflow-style: none;
@@ -867,6 +875,9 @@ button {
   .home-image {
     transition: all 0.2s linear;
     order: -1;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .home-image-box {
     max-width: 300px;
@@ -878,8 +889,15 @@ button {
     transition: all 0.2s linear;
     width: calc(50% - 30px);
   }
+  .portfolio-item-thumbnail img {
+    height: 100%;
+  }
 }
 @media screen and (max-width: 767.98px) {
+  .home-name {
+    font-size: 42px;
+    transition: all 0.2s linear;
+  }
   .about-image, .about-content {
     width: 100%;
   }
@@ -906,6 +924,13 @@ button {
   }
 }
 @media screen and (max-width: 575px) {
+  .home-section {
+    padding: 30px 0 20px 0;
+  }
+  .home-image {
+    transition: all 0.2s linear;
+    max-width: 220px;
+  }
   .section-title h2 {
     font-size: 35px !important;
     transition: font-size 0.2s ease-in;
@@ -921,9 +946,6 @@ button {
   .home-job {
     font-size: 18px;
     transition: font-size 0.2s ease-in;
-  }
-  .portfolio-item-thumbnail img {
-    height: 100%;
   }
   .portfolio-popup-title {
     font-size: 22px;

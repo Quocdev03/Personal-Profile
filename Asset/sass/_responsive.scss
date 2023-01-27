@@ -18,6 +18,9 @@
       &-image {
          transition: all 0.2s linear;
          order: -1;
+         width: 250px;
+         margin-left: auto;
+         margin-right: auto;
 
          &-box {
             max-width: 300px;
@@ -35,11 +38,24 @@
       &-item {
          transition: all 0.2s linear;
          width: calc(50% - 30px);
+
+         &-thumbnail {
+            img {
+               height: 100%;
+            }
+         }
       }
    }
 }
 
 @media screen and (max-width: 767.98px) {
+   .home {
+      &-name {
+         font-size: 42px;
+         transition: all 0.2s linear;
+      }
+   }
+
    .about {
 
       &-image,
@@ -85,6 +101,17 @@
 }
 
 @media screen and (max-width: 575px) {
+   .home {
+      &-section {
+         padding: 30px 0 20px 0;
+      }
+
+      &-image {
+         transition: all 0.2s linear;
+         max-width: 220px;
+      }
+   }
+
    .section {
       &-title {
          h2 {
@@ -114,13 +141,6 @@
    }
 
    .portfolio {
-      &-item {
-         &-thumbnail {
-            img {
-               height: 100%;
-            }
-         }
-      }
 
       &-popup {
          &-title {
