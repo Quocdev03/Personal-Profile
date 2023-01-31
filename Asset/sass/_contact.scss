@@ -87,7 +87,7 @@
             transition: all .3s ease;
 
             &:hover {
-               background-color: $main-color;
+               background-color: rgba(255, 255, 255, 0.43);
                color: $white;
             }
          }

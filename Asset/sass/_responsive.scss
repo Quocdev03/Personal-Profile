@@ -78,6 +78,10 @@
          &-inner {
             padding: 30px 15px;
          }
+
+         &-content {
+            padding: 60px 50px;
+         }
       }
    }
 
@@ -96,6 +100,12 @@
          &-item {
             padding: 0;
          }
+      }
+   }
+
+   .nav {
+      &-link {
+         font-size: 35px;
       }
    }
 }
@@ -123,7 +133,7 @@
 
    .nav {
       &-link {
-         font-size: 35px;
+         font-size: 30px;
       }
    }
 
