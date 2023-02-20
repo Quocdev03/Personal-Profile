@@ -1,6 +1,6 @@
-// html {
-//     scroll-behavior: smooth;
-// }
+html {
+   scroll-behavior: smooth;
+}
 
 body {
    min-height: 100vh;
@@ -14,6 +14,7 @@ body {
    font-weight: 300;
    padding: 35px 15px;
    overflow-x: hidden;
+   text-transform: capitalize;
 
    &::before {
       content: "";
@@ -109,7 +110,7 @@ button {
 .btn {
    line-height: 1.5;
    background-color: $white-alpha-25;
-   border: 1px $white-alpha-40;
+   border: 1px solid $white-alpha-40;
    padding: 10px 20px;
    display: inline-block;
    border-radius: 30px;

@@ -21,7 +21,7 @@
    &-image {
 
       &-box {
-         max-width: 360px;
+         max-width: 290px;
          background-color: $white-alpha-25;
          border-radius: 50%;
          border: 8px solid $white-alpha-25;
@@ -30,6 +30,13 @@
          img {
             width: 100%;
             border-radius: 50%;
+            filter: blur(3px);
+            transition: .3s ease-in-out;
+
+            &:hover {
+               filter: blur(0);
+               transform: scale(1.01);
+            }
          }
       }
    }
