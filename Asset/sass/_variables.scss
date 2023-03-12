@@ -9,12 +9,10 @@ $cyan-light: #aef1ee;
 $white: #ffffff;
 $white-alpha-40: rgba(255, 255, 255, 0.3);
 $white-alpha-25: rgba(255, 255, 255, 0.16);
-$backdrop-filter-blur: blur(5px);
+// $backdrop-filter-blur: blur(5px);
+$backdrop-filter-blur: blur(3px);
 $sec-height: 560px;
 // $background-gradient: linear-gradient(to bottom right, $pink-light, $cyan-light);
-// $background-gradient: linear-gradient(76.9deg, rgba(255, 90, 90, 1) 27.2%, rgba(130, 5, 255, 1) 79.9%);
-// $background-gradient: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 101, 133, 1) 0%, rgba(255, 211, 165, 1) 90%);
-// $background-gradient: linear-gradient(109.6deg, rgba(123, 90, 224, 1) 11.2%, rgba(164, 46, 253, 1) 32.6%, rgba(213, 56, 234, 1) 62.7%, rgba(251, 138, 52, 1) 100.2%);
 // $background-gradient: linear-gradient(111.5deg,
 //       rgba(249, 230, 1, 1) 9.9%,
 //       rgba(249, 144, 1, 1) 19.4%,
@@ -30,8 +28,5 @@ $sec-height: 560px;
 //       rgba(22, 255, 179, 1) 92.5%,
 //       rgba(22, 255, 109, 1) 97.1%,
 //       rgba(92, 255, 22, 1) 103.5%);
-
-// $background-gradient: linear-gradient(117.8deg, rgba(240, 19, 77, 1) 22.2%, rgba(228, 0, 124, 1) 88.7%);
-// $background-gradient: radial-gradient(circle 934px at 6% 39.5%, rgba(255, 35, 90, 1) 0.2%, rgba(255, 35, 144, 1) 54.8%, rgba(250, 99, 160, 1) 93.4%);
 $background-gradient: linear-gradient(70.6deg, rgba(172, 30, 255, 1) 0.3%, rgba(65, 35, 251, 1) 55.8%, rgba(35, 251, 224, 1) 105.1%);
 // $background-gradient: linear-gradient(105.9deg, rgba(15, 209, 165, 1) 3.8%, rgba(15, 157, 209, 1) 20.8%, rgba(133, 13, 230, 1) 51.9%, rgba(230, 13, 202, 1) 73.1%, rgba(242, 180, 107, 1) 94.1%);
